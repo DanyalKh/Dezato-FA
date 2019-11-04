@@ -1,0 +1,13 @@
+*.pyc
+*.py~
+*.comp.js
+*.DS_Store
+locale
+.wnf-lang-status
+*.swp
+*.egg-info
+dist/
+build/
+frappe/docs/current
+.vscode
+node_modules

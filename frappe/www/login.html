@@ -1,0 +1,126 @@
+{% extends "templates/web.html" %}
+
+{% block style %}
+<style>
+	{% include "templates/includes/login/login.css" %}
+</style>
+{% endblock %}
+
+{% block page_content %}
+<!-- {{ for_test }} -->
+<div class="col-md-8 image_login_left" >
+	<img src="/assets/sp_theme/images/side_image.jpg" class="login_image_form">
+</div>
+<div class="col-md-4 login_text_field_position" >
+	 <section class='for-login site-containers padding-tbs log_side_text'>
+<center> <img src="/assets/sp_theme/images/splogo.png" alt="Mountain View" class="logo_image_right_side"></center>
+	<div class="login-content page-card field-top">
+    	<h3 class="wow fadeInDown animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s;">Sign In</h3>
+		<form class="form-signin form-login" role="form">
+			<!-- <div class="page-card-head">
+				<span class="indicator blue" data-text="{{ _("Sign In") }}"></span>
+			</div> -->
+
+<div class="row">
+   <div class="col-xs-6">
+
+	   <input class="form-control form-control-solid placeholder-no-fix form-group" id="login_email" type="text" autocomplete="off" placeholder="Username" name="username" required/>
+   </div>
+   <div class="col-xs-6">
+	   <input class="form-control form-control-solid placeholder-no-fix form-group" type="password" id="login_password" autocomplete="off" placeholder="Password" name="password" required/>
+   </div>
+</div>
+
+			<div class="row">
+
+                                <div class="col-sm-12 text-right">
+									<button class="btn btn-sm btn-primary btn-block btn-login" type="submit">
+				{{ _("Sign in") }}</button>
+                                    <div class="forgot-password">
+										<p style="float:left">
+										<a href="#forgot">{{ _("Forgot Password?") }}</a></p>
+                                     </div>
+
+                                </div>
+                            </div>
+
+			{% if ldap_settings.enabled %}
+			<button class="btn btn-sm btn-default btn-block btn-login btn-ldap-login">
+				{{ _("Login with LDAP") }}</button>
+			{% endif %}
+		</form>
+	</div>
+	<div class='form-footer'>
+
+			<div class='social-logins'>
+			{%- if social_login -%}
+				<h6>{{ _("Or login with") }}</h6>
+
+				<p class="text-center" style="margin-top: 15px">
+				{%- if facebook_login is defined %}
+				<a href="{{ facebook_login }}"
+					class="btn btn-default btn-xs btn-social btn-facebook">
+					<i class="fa fa-facebook-official"></i> {{ _("Facebook") }}</a>
+				{%- endif -%}
+
+				{%- if google_login is defined %}
+				<a href="{{ google_login }}" class="btn btn-default btn-xs btn-social btn-google">
+					<i class="fa fa-google-plus"></i> {{ _("Google") }}</a>
+				{%- endif -%}
+
+				{%- if github_login is defined %}
+				<a href="{{ github_login }}" class="btn btn-default btn-xs btn-social btn-github">
+					<i class="fa fa-github"></i> {{ _("GitHub") }}</a>
+				{%- endif -%}
+
+				{%- if frappe_login is defined %}
+				<a href="{{ frappe_login }}" class="btn btn-default btn-xs btn-social">
+					<img style='width: 16px; height: 16px;'
+						src="/assets/frappe/images/favicon.png"> {{ _("Frappe") }}</a>
+				{%- endif -%}
+				</p>
+			{%- endif -%}
+			</div>
+
+ 	{%- if not disable_signup -%}
+	<!--	<p class="text-center">
+			<a href="#signup" style="margin-top: -2px;">{{ _("Don't have an account? Sign up") }}</a>
+		</p> -->
+	{%- endif -%}
+
+	</div>
+</section>
+
+<section class='for-forgot site-containers padding-tbs log_side_text'>
+<center>	<img src="/assets/js/img/splogo.png" alt="Mountain View" class="logo_image_right_side"></center>
+	<div class="login-content page-card field-top" >
+	<form class="form-signin form-forgot hide" role="form">
+		<h3 class="wow fadeInDown animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s;">Forgot Password</h3>
+
+        <div class="form__wrapper wow fadeInDown" data-wow-delay="0.6s">
+			<input type="email" class="form-control form__input" id="forgot_email"  name="Email address" placeholder="Email address">
+			<!--<label class="form__label">-->
+				<!--<span class="form__label-content">Email address</span>-->
+			<!--</label>-->
+		 </div>
+		<br/>
+		<div class='form-footer'>
+		<a href="#login">{{ _("Back to Login") }}</a>
+			     <button class="btn btn-sm btn-primary btn-block btn-forgot" type="submit">{{ _("Send Password") }}</button>
+
+	</div>
+   </form>
+	</div>
+
+</section>
+
+
+</div>
+
+{% endblock %}
+
+{% block script %}
+	<script>{% include "templates/includes/login/login.js" %}</script>
+{% endblock %}
+
+{% block sidebar %}{% endblock %}

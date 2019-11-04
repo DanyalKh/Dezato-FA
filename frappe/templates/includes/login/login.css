@@ -1,0 +1,134 @@
+.container {
+    width: auto !important;
+}
+.page-container {
+    max-width: 1320px !important;
+}
+.page-card .btn {
+    float:right;
+    width: 35% !important;
+    margin-top: 0px;
+}
+.page-card {
+    max-width: 500px;
+    padding: 15px;
+    margin: 70px auto;
+    border: 0px;
+    border-radius: 0px;
+    background-color: none;
+    box-shadow: none;
+}
+.login_image_form {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    width: 840px !important;
+    height: 880px !important;
+    max-height: none;
+    max-width: none;
+    z-index: -999999;
+    left: 0px;
+    top: -131.2px;
+}
+.image_login_left {
+    margin-left: -75px;
+}
+.login_text_field_position {
+    width:39%;
+    margin-top: 15%;
+}
+.log_side_text {
+    float: right;
+    width: 500px !important;
+    margin-top: 0px !important;
+    display: block;
+}
+.logo_image_right_side {
+    width:300px;
+    height:144px;
+    margin-left: 0px;
+
+}
+.field-top{
+margin-top: 20px;
+}
+
+@media (max-width: 1351px)  {
+.log_side_text {
+    float: right;
+    width: 355px !important;
+
+}
+.login_image_form {
+      width: 840px !important;
+    height: 776px !important;
+}
+}
+
+
+@media (max-width: 854px)  {
+
+.log_side_text {
+    float: right;
+    width: 230px !important;
+    margin-top: 0px !important;
+
+}
+.login_text_field_position {
+    width: 31% !important;
+    margin-top: 5% !important;
+    margin-left: 66% !important;
+}
+.login_image_form {
+   width: 506px !important;
+    height: 609px !important;
+}
+.image_login_left {
+    margin-left: -30px !important;
+}
+}
+@media (max-width: 768px)  {
+.login_text_field_position {
+    width: 66% !important;
+   margin-top: 90% !important;
+    margin-left: 35% !important;
+}
+.log_side_text {
+    float: right;
+    width: 500px !important;
+    margin-top: 0px !important;
+}
+.login_image_form {
+    width: 770px !important;
+    height: 690px !important;
+}
+.col-md-8 {
+    width: 125% !important;
+    padding-right:0px !important;
+}
+}
+@media (max-width: 480px)  {
+
+.login_image_form {
+   height: 525px !important;
+   width: 525px !important;
+}
+.col-md-8 {
+    width: 125% !important;
+    padding-right:0px !important;
+}
+.login_text_field_position {
+        width: 31% !important;
+    margin-top: 5% !important;
+    margin-left: 62% !important;
+}
+.log_side_text {
+       float: right;
+    width: 325px !important;
+    margin-top: 360px !important;
+}
+.field-top {
+    margin-top: 0px !important;
+}
+}
